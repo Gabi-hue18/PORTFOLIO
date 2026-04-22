@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shivam | Itachi Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Custom cursor -->
+  <div id="cursor"></div>
+
+  <!-- Canvas for chakra particles -->
+  <canvas id="chakra"></canvas>
+
+  <!-- Cloud layer -->
+  <div id="cloud-layer"></div>
+
+  <!-- ── INTRO SCREEN ── -->
+  <div id="intro">
+    <div class="intro-content">
+
+      <!-- Eye-opening lid animation -->
+      <div class="eye-lid-container">
+        <div class="eyelid top-lid"></div>
+        <div class="sharingan-intro-wrap">
+          <svg class="intro-sharingan" viewBox="0 0 300 300">
+            <defs>
+              <radialGradient id="introGrad" cx="50%" cy="50%" r="50%">
+                <stop offset="0%" stop-color="#3a0000"/>
+                <stop offset="70%" stop-color="#1a0000"/>
+                <stop offset="100%" stop-color="#0a0000"/>
+              </radialGradient>
+              <filter id="introGlow">
+                <feGaussianBlur stdDeviation="6" result="blur"/>
+                <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+              </filter>
+            </defs>
+            <circle cx="150" cy="150" r="148" fill="url(#introGrad)"/>
+            <circle cx="150" cy="150" r="140" stroke="#cc0000" stroke-width="6" fill="none" filter="url(#introGlow)"/>
+            <circle cx="150" cy="150" r="90" stroke="#990000" stroke-width="4" fill="none"/>
+            <g class="intro-orbit">
+              <!-- Tomoe 1 -->
+              <circle cx="150" cy="50" r="12" fill="#cc0000"/>
+              <path d="M144 62 C130 80 135 100 150 95 C165 90 170 70 156 62Z" fill="#cc0000"/>
+              <!-- Tomoe 2 -->
+              <circle cx="62" cy="215" r="12" fill="#cc0000"/>
+              <path d="M56 203 C40 188 45 165 60 168 C75 171 80 193 68 203Z" fill="#cc0000"/>
+              <!-- Tomoe 3 -->
+              <circle cx="238" cy="215" r="12" fill="#cc0000"/>
+              <path d="M244 203 C260 188 255 165 240 168 C225 171 220 193 232 203Z" fill="#cc0000"/>
+            </g>
+            <circle cx="150" cy="150" r="28" fill="black"/>
+            <circle cx="150" cy="150" r="10" fill="#1a0000"/>
+          </svg>
+        </div>
+        <div class="eyelid bottom-lid"></div>
+      </div>
+
+      <h1 class="activate-text">
+        <span class="glitch" data-text="Activating Sharingan...">Activating Sharingan...</span>
+      </h1>
+      <div class="uchiha-kanji">うちは一族</div>
+
+    </div>
+  </div>
+
+  <!-- ── MAIN CONTENT ── -->
+  <div class="site-wrapper" id="main-container">
+
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+      <div class="nav-logo">うちは</div>
+      <div class="nav-links">
+        <a href="#about" class="nav-link">About</a>
+        <a href="#certificates" class="nav-link">Certificates</a>
+        <a href="#projects" class="nav-link">Projects</a>
+      </div>
+    </nav>
+
+    <!-- ── HERO SECTION ── -->
+    <div class="hero-section">
+
+      <div class="hero-text-top">
+        <p class="hero-subtitle">[ Cybersecurity &nbsp;·&nbsp; Ethical Hacking &nbsp;·&nbsp; Electronics ]</p>
+        <h1 class="name-title" data-text="SHIVAM">SHIVAM</h1>
+      </div>
+
+      <div class="eye-stage">
+
+        <!-- Outer decorative ring glows -->
+        <div class="ring-glow r1"></div>
+        <div class="ring-glow r2"></div>
+
+        <div class="eye-rotate" id="eyeRotate">
+          <svg class="sharingan" id="sharinganSVG" viewBox="0 0 300 300">
+            <defs>
+              <radialGradient id="eyeBg" cx="50%" cy="50%" r="50%">
+                <stop offset="0%" stop-color="#3a0000"/>
+                <stop offset="100%" stop-color="#0d0000"/>
+              </radialGradient>
+              <radialGradient id="pupilGrad" cx="50%" cy="50%" r="50%">
+                <stop offset="0%" stop-color="#1a0000"/>
+                <stop offset="100%" stop-color="#000000"/>
+              </radialGradient>
+              <filter id="drop">
+                <feGaussianBlur stdDeviation="3" result="b"/>
+                <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+              </filter>
+            </defs>
+
+            <!-- Eye fill -->
+            <circle cx="150" cy="150" r="148" fill="url(#eyeBg)"/>
+
+            <!-- Outer rings -->
+            <circle cx="150" cy="150" r="140" stroke="#cc0000" stroke-width="7" fill="none" filter="url(#drop)"/>
+            <circle cx="150" cy="150" r="118" stroke="#880000" stroke-width="1.5" fill="none" opacity="0.5"/>
+            <circle cx="150" cy="150" r="90"  stroke="#cc0000" stroke-width="5"   fill="none" filter="url(#drop)"/>
+            <circle cx="150" cy="150" r="65"  stroke="#660000" stroke-width="1"   fill="none" opacity="0.4"/>
+
+            <!-- Tick marks on outer ring -->
+            <g stroke="#ff4444" stroke-width="3" opacity="0.35">
+              <line x1="150" y1="10"  x2="150" y2="28"/>
+              <line x1="150" y1="272" x2="150" y2="290"/>
+              <line x1="10"  y1="150" x2="28"  y2="150"/>
+              <line x1="272" y1="150" x2="290" y2="150"/>
+              <line x1="51"  y1="51"  x2="64"  y2="64"/>
+              <line x1="236" y1="51"  x2="249" y2="64"/>
+              <line x1="51"  y1="249" x2="64"  y2="236"/>
+              <line x1="236" y1="249" x2="249" y2="236"/>
+            </g>
+
+            <!-- ── Orbiting tomoe (proper comma-shaped) ── -->
+            <g class="orbit" id="orbit">
+              <!-- Tomoe 1 → About -->
+              <g class="tomoe-group" data-target="about">
+                <circle class="tomoe-dot" cx="150" cy="50" r="12" fill="#cc0000"/>
+                <path class="tomoe-tail" d="M144 62 C128 80 134 102 150 97 C166 92 172 70 156 62Z" fill="#cc0000"/>
+                <circle class="tomoe-hit" cx="150" cy="72" r="26" fill="transparent"/>
+              </g>
+              <!-- Tomoe 2 → Certificates -->
+              <g class="tomoe-group" data-target="certificates">
+                <circle class="tomoe-dot" cx="62" cy="215" r="12" fill="#cc0000"/>
+                <path class="tomoe-tail" d="M56 203 C38 187 43 163 59 167 C75 171 80 196 68 203Z" fill="#cc0000"/>
+                <circle class="tomoe-hit" cx="60" cy="232" r="26" fill="transparent"/>
+              </g>
+              <!-- Tomoe 3 → Projects -->
+              <g class="tomoe-group" data-target="projects">
+                <circle class="tomoe-dot" cx="238" cy="215" r="12" fill="#cc0000"/>
+                <path class="tomoe-tail" d="M244 203 C262 187 257 163 241 167 C225 171 220 196 232 203Z" fill="#cc0000"/>
+                <circle class="tomoe-hit" cx="240" cy="232" r="26" fill="transparent"/>
+              </g>
+            </g>
+
+            <!-- Pupil (moves with mouse) -->
+            <circle id="pupil" cx="150" cy="150" r="32" fill="url(#pupilGrad)"/>
+            <circle id="pupil-inner" cx="150" cy="150" r="13" fill="#000"/>
+            <circle id="pupil-glint" cx="143" cy="143" r="5" fill="white" opacity="0.18"/>
+
+            <!-- ── Mangekyo Pattern (revealed on scroll) ── -->
+            <g id="mangekyo" opacity="0" style="transition:opacity 1.5s">
+              <path d="M150 78 C175 112 196 122 222 150 C196 178 175 188 150 222
+                       C125 188 104 178 78 150 C104 122 125 112 150 78Z"
+                    fill="#3a0000" stroke="#cc0000" stroke-width="2.5"/>
+              <path d="M150 102 C165 124 180 133 202 150 C180 167 165 176 150 198
+                       C135 176 120 167 98 150 C120 133 135 124 150 102Z"
+                    fill="#220000" stroke="#880000" stroke-width="1.5"/>
+              <!-- 3 inner blades -->
+              <path d="M150 118 C156 130 156 143 150 150 C144 143 144 130 150 118Z"
+                    fill="#cc0000" opacity="0.7"/>
+              <path d="M118 168 C129 161 142 161 150 150 C143 161 133 169 118 168Z"
+                    fill="#cc0000" opacity="0.7"/>
+              <path d="M182 168 C171 161 158 161 150 150 C157 161 167 169 182 168Z"
+                    fill="#cc0000" opacity="0.7"/>
+              <!-- Centre dot -->
+              <circle cx="150" cy="150" r="8" fill="#ff2200"/>
+            </g>
+
+          </svg>
+        </div><!-- /eye-rotate -->
+
+        <!-- Floating labels for tomoe -->
+        <div class="tomoe-label tl-about">About</div>
+        <div class="tomoe-label tl-certs">Certificates</div>
+        <div class="tomoe-label tl-proj">Projects</div>
+      </div><!-- /eye-stage -->
+
+      <div class="scroll-hint">
+        <span>Scroll to reveal your path</span>
+        <div class="scroll-chevron"></div>
+      </div>
+
+    </div><!-- /hero-section -->
+
+    <!-- ── ABOUT ── -->
+    <section id="about" class="section">
+      <div class="section-inner reveal-section">
+        <div class="section-header">
+          <div class="kunai-bar"></div>
+          <h2 class="section-title">About Me</h2>
+          <div class="kunai-bar"></div>
+        </div>
+        <div class="glass-card about-card">
+          <div class="card-corner tl"></div>
+          <div class="card-corner tr"></div>
+          <div class="card-corner bl"></div>
+          <div class="card-corner br"></div>
+          <p class="about-text">
+            Electronics student walking the path of the shinobi — mastering
+            <span class="highlight">cybersecurity</span> and
+            <span class="highlight">ethical hacking</span>, one jutsu at a time.
+            Like Itachi, I see what others cannot.
+          </p>
+          <div class="stat-row">
+            <div class="stat"><span class="stat-num">∞</span><span class="stat-label">Curiosity</span></div>
+            <div class="stat"><span class="stat-num">S</span><span class="stat-label">Rank</span></div>
+            <div class="stat"><span class="stat-num">0</span><span class="stat-label">Regrets</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="certificates" class="section">
+  <div class="section-inner reveal-section">
+    <div class="section-header">
+      <div class="kunai-bar"></div>
+      <h2 class="section-title">Certificates</h2>
+      <div class="kunai-bar"></div>
+    </div>
+    <div class="cards-grid">
+
+      <!-- ── CERTIFICATE 1 ── -->
+      <div class="cert-card glass-card" onclick="openCert('certificates/cert1.jpg')">
+        <div class="card-corner tl"></div><div class="card-corner tr"></div>
+        <div class="card-corner bl"></div><div class="card-corner br"></div>
+        <div class="cert-img-wrap">
+          <img src="certificates/cert1.jpg" alt="Certificate 1" class="cert-img"/>
+          <div class="cert-overlay"><span>View</span></div>
+        </div>
+        <h3>Certificate Title</h3>
+        <p>Issuing Authority · 2024</p>
+      </div>
+
+      <!-- ── CERTIFICATE 2 ── -->
+      <div class="cert-card glass-card" onclick="openCert('certificates/cert2.jpg')">
+        <div class="card-corner tl"></div><div class="card-corner tr"></div>
+        <div class="card-corner bl"></div><div class="card-corner br"></div>
+        <div class="cert-img-wrap">
+          <img src="certificates/cert2.jpg" alt="Certificate 2" class="cert-img"/>
+          <div class="cert-overlay"><span>View</span></div>
+        </div>
+        <h3>Certificate Title</h3>
+        <p>Issuing Authority · 2024</p>
+      </div>
+
+      <!-- ── CERTIFICATE 3 ── -->
+      <div class="cert-card glass-card" onclick="openCert('certificates/cert3.jpg')">
+        <div class="card-corner tl"></div><div class="card-corner tr"></div>
+        <div class="card-corner bl"></div><div class="card-corner br"></div>
+        <div class="cert-img-wrap">
+          <img src="certificates/cert3.jpg" alt="Certificate 3" class="cert-img"/>
+          <div class="cert-overlay"><span>View</span></div>
+        </div>
+        <h3>Certificate Title</h3>
+        <p>Issuing Authority · 2024</p>
+      </div>
+
+      <!-- ── CERTIFICATE 4 ── -->
+      <div class="cert-card glass-card" onclick="openCert('certificates/cert4.jpg')">
+        <div class="card-corner tl"></div><div class="card-corner tr"></div>
+        <div class="card-corner bl"></div><div class="card-corner br"></div>
+        <div class="cert-img-wrap">
+          <img src="certificates/cert4.jpg" alt="Certificate 4" class="cert-img"/>
+          <div class="cert-overlay"><span>View</span></div>
+        </div>
+        <h3>Certificate Title</h3>
+        <p>Issuing Authority · 2024</p>
+      </div>
+
+      <!-- ── CERTIFICATE 5 ── -->
+      <div class="cert-card glass-card" onclick="openCert('certificates/cert5.jpg')">
+        <div class="card-corner tl"></div><div class="card-corner tr"></div>
+        <div class="card-corner bl"></div><div class="card-corner br"></div>
+        <div class="cert-img-wrap">
+          <img src="certificates/cert5.jpg" alt="Certificate 5" class="cert-img"/>
+          <div class="cert-overlay"><span>View</span></div>
+        </div>
+        <h3>Certificate Title</h3>
+        <p>Issuing Authority · 2024</p>
+      </div>
+
+      <!-- ── CERTIFICATE 6 ── -->
+      <div class="cert-card glass-card" onclick="openCert('certificates/cert6.jpg')">
+        <div class="card-corner tl"></div><div class="card-corner tr"></div>
+        <div class="card-corner bl"></div><div class="card-corner br"></div>
+        <div class="cert-img-wrap">
+          <img src="certificates/cert6.jpg" alt="Certificate 6" class="cert-img"/>
+          <div class="cert-overlay"><span>View</span></div>
+        </div>
+        <h3>Certificate Title</h3>
+        <p>Issuing Authority · 2024</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── LIGHTBOX ── -->
+<div id="lightbox" onclick="closeCert()">
+  <div class="lightbox-inner">
+    <button class="lb-close" onclick="closeCert()">✕</button>
+    <img id="lightbox-img" src="" alt="Certificate"/>
+  </div>
+</div>
+
+    <!-- ── PROJECTS ── -->
+    <section id="projects" class="section">
+      <div class="section-inner reveal-section">
+        <div class="section-header">
+          <div class="kunai-bar"></div>
+          <h2 class="section-title">Projects</h2>
+          <div class="kunai-bar"></div>
+        </div>
+        <div class="cards-grid">
+          <div class="project-card glass-card">
+            <div class="card-corner tl"></div><div class="card-corner tr"></div>
+            <div class="card-corner bl"></div><div class="card-corner br"></div>
+            <div class="project-rank">S</div>
+            <h3>Project Title</h3>
+            <p>Brief description of your project. Replace with real details.</p>
+            <div class="project-tags">
+              <span class="tag">Python</span>
+              <span class="tag">Security</span>
+            </div>
+          </div>
+          <div class="project-card glass-card">
+            <div class="card-corner tl"></div><div class="card-corner tr"></div>
+            <div class="card-corner bl"></div><div class="card-corner br"></div>
+            <div class="project-rank">A</div>
+            <h3>Project Title</h3>
+            <p>Brief description of your project. Replace with real details.</p>
+            <div class="project-tags">
+              <span class="tag">Linux</span>
+              <span class="tag">Network</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-crest">うちは</div>
+      <p>「 たとえ汚れた道を歩もうとも 」<br><small>Even if the path is corrupt — Itachi Uchiha</small></p>
+    </footer>
+
+  </div><!-- /site-wrapper -->
+
+  <script src="script.js"></script>
+</body>
+</html>
