@@ -787,3 +787,16 @@ body {
   max-width: 900px;
   margin: 0 auto;
 }
+/* ── Introduction nav button ── */
+.nav-intro-btn {
+  border: 1px solid rgba(204, 0, 0, 0.55) !important;
+  padding: 5px 14px !important;
+  border-radius: 2px;
+  color: #cc0000 !important;
+  transition: background 0.3s, color 0.3s, box-shadow 0.3s !important;
+}
+.nav-intro-btn:hover {
+  background: #cc0000 !important;
+  color: #fff !important;
+  box-shadow: 0 0 14px rgba(204,0,0,0.5);
+}
