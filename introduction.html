@@ -322,6 +322,45 @@
     /* ── CLICK RIPPLE ── */
     @keyframes rippleOut { to { transform: translate(-50%,-50%) scale(18); opacity: 0; } }
 
+      /* ── CONTACT SECTION ── */
+    .contact-section {
+        margin-top: 18px;
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+      }
+
+      .contact-item {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        align-items: center;
+        font-family: 'Share Tech Mono', monospace;
+        font-size: 0.9rem;
+        letter-spacing: 1px;
+      }
+
+      .contact-title {
+        color: var(--red);
+        min-width: 130px;
+      }
+
+      .contact-value {
+        color: #ddd;
+      }
+
+      .contact-link {
+        color: #ddd;
+        text-decoration: none;
+        transition: 0.3s;
+        border-bottom: 1px solid transparent;
+      }
+
+      .contact-link:hover {
+        color: var(--red);
+        border-bottom: 1px solid var(--red);
+      }
+
     /* ── RESPONSIVE ── */
     @media (max-width: 600px) {
       .page { padding: 100px 20px 50px; }
@@ -363,7 +402,7 @@
 
           <div class="prn-row">
             <span class="prn-label">PRN</span>
-            <span class="prn-value">2423302</span>
+            <span class="prn-value">202501070233</span>
           </div>
 
           <p class="meta-line">
@@ -418,13 +457,58 @@
           </svg>
           <span>Download Resume</span>
         </a>
+
         <span class="btn-hint">// PDF Format</span>
       </div>
 
-    </div>
-  </div>
+      <!-- CONTACT DETAILS -->
+      <div class="divider"></div>
 
-  <script>
+      <p class="section-label">// Contact Details</p>
+
+      <div class="contact-section">
+
+        <div class="contact-item">
+          <span class="contact-title">Contact No :</span>
+          <span class="contact-value">+91 98765 43210</span>
+        </div>
+
+        <div class="contact-item">
+          <span class="contact-title">Mail :</span>
+          <a class="contact-link" href="mailto:202501070233@mitaoe.ac.in">
+            202501070233@mitaoe.ac.in
+          </a>
+        </div>
+
+        <div class="contact-item">
+          <span class="contact-title">GitHub :</span>
+          <a class="contact-link"
+            href="https://github.com/Gabi-hue18"
+            target="_blank">
+            github.com/Gabi-hue18
+          </a>
+        </div>
+
+        <div class="contact-item">
+          <span class="contact-title">LinkedIn :</span>
+          <a class="contact-link"
+            href="https://www.linkedin.com/in/sawant-shivam-mahendra-985147405?utm_source=share_via&utm_content=profile&utm_medium=member_android"
+            target="_blank">
+            View LinkedIn Profile
+          </a>
+        </div>
+
+      </div>
+
+      </div>
+      </div>
+
+      <script>
+
+        </div>
+        </div>
+
+      <script>
     /* ── CUSTOM CURSOR ── */
     const cursor = document.getElementById("cursor");
     document.addEventListener("mousemove", e => {
@@ -477,9 +561,11 @@
       if (now - lastBurst > 50) { particles.push(makeParticle(true)); lastBurst = now; }
     });
 
-    function animateCanvas() {
+    function animateCanvas() 
+    {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
-      for (let i = particles.length - 1; i >= 0; i--) {
+      for (let i = particles.length - 1; i >= 0; i--) 
+      {
         const p = particles[i];
         p.x += p.speedX; p.y += p.speedY; p.life -= p.decay;
         if (p.mouse) { p.speedX *= 0.97; p.speedY *= 0.97; }
